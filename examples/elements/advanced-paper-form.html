@@ -29,8 +29,13 @@
   <script>
     Polymer('advanced-paper-form', {
       save: function() {
+        var lastObject = this.nameList[this.nameList.length - 1];
+        var id = 1;
+        if (lastObject) {
+          id = parseInt(lastObject.id) + 1;
+        }
         var data = {
-          "id": this.nameList.length + 1,
+          "id": id,
           "firstName": this.firstName,
           "lastName": this.lastName
         }
