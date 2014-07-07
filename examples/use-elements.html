@@ -7,13 +7,29 @@
 
     <!-- 2. Import the element(s) that you want to use -->
     <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+
+    <!-- 3. Make it look a bit more fancy :) -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+    <style media="screen">
+      body {
+        font-family: 'Merriweather', serif;
+      }
+    </style>
   </head>
   <body>
-    <div>
+    <div id="title">
+      <h3>My paper form</h3>
+    </div>
+    <div id="firstName">
       <paper-input label="Your first name"></paper-input>
     </div>
-    <div>
+    <div id="lastName">
       <paper-input label="Your last name"></paper-input>
+    </div>
+    <div id="submit">
+      <paper-button label="submit" raisedButton></paper-button>
     </div>
   </body>
 </html>
