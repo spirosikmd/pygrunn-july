@@ -1,0 +1,29 @@
+{
+  "name": "pygrunn-july",
+  "version": "0.1.0",
+  "homepage": "https://github.com/spirosikmd/pygrunn-july",
+  "authors": [
+    "Spyros Ioakeimidis <spyrosikmd@gmail.com>"
+  ],
+  "description": "Examples used for the PyGrunn July edition talk about Polymer.",
+  "keywords": [
+    "polymer",
+    "web",
+    "components",
+    "pygrunn"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3",
+    "paper-elements": "Polymer/paper-elements#~0.3.3",
+    "core-elements": "Polymer/core-elements#~0.3.3"
+  }
+}
