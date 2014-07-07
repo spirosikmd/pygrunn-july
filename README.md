@@ -12,9 +12,9 @@ From the top directory run
 bower install
 ```
 
-which will create a bower_components folder with all the required dependencies
-in the examples directory. From the examples directory run a python server,
-assuming that python is available in your system.
+which will create a *bower_components* folder with all the required dependencies
+in the [examples](examples/) directory. From the [examples](examples/) directory
+run a python server, assuming that python is available in your system.
 
 ```bash
 python -m SimpleHTTPServer 9000
