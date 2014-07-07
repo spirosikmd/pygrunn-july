@@ -1,0 +1,43 @@
+<!-- 1. Load the Polymer core. -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- 2. Import the element(s) that we want to use. -->
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+<!-- 3. Define our custom element, which has a nameList attribute. We give it the name 'advanced-paper-form'. -->
+<polymer-element name="advanced-paper-form" attributes="nameList">
+  <template>
+
+    <div id="title">
+      <h3>My paper form</h3>
+    </div>
+    <div id="firstName">
+      <paper-input floatinglabel label="Your first name" value="{{firstName}}"></paper-input>
+    </div>
+    <div id="lastName">
+      <paper-input floatinglabel label="Your last name" value="{{lastName}}"></paper-input>
+    </div>
+    <!-- 4. On click we execute the save() function of our element. -->
+    <div id="submit">
+      <paper-button label="save" raisedButton on-click="{{save}}"></paper-button>
+    </div>
+
+  </template>
+
+  <!-- 5. When saved is clicked, we create an object and we fire a 'save' event. -->
+  <script>
+    Polymer('advanced-paper-form', {
+      save: function() {
+        var data = {
+          "id": this.nameList.length + 1,
+          "firstName": this.firstName,
+          "lastName": this.lastName
+        }
+        this.fire('save', data);
+        this.firstName = "";
+        this.lastName = "";
+      }
+    });
+  </script>
+</polymer-element>

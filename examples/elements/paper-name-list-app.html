@@ -1,0 +1,46 @@
+<!-- 1. Load the Polymer core. -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- 2. Import the element(s) that we want to use. -->
+<link rel="import" href="advanced-paper-form.html">
+<link rel="import" href="paper-name-list.html">
+<link rel="import" href="../bower_components/core-localstorage/core-localstorage.html">
+
+<!-- 3. Define our custom element. We give it the name 'paper-name-list-app'. -->
+<polymer-element name="paper-name-list-app">
+  <template>
+    <!-- 4. Declare the element by its tag. Note that the element will not be rendered until we actually declare it! -->
+    <advanced-paper-form nameList="{{nameList}}" on-save="{{save}}"></advanced-paper-form>
+
+    <!-- 5. Declare another element. This will be used to show our name list. -->
+    <paper-name-list nameList="{{nameList}}" on-delete="{{delete}}"></paper-name-list>
+
+    <!-- 6. Declare our localstorage element. -->
+    <core-localstorage id="storage" name="name-list-storage" value="{{nameList}}"></core-localstorage>
+
+  </template>
+
+  <!-- 7. We initialize the nameList. On 'save' we save the data in the localstorage. On 'delete' we delete it. -->
+  <script>
+    Polymer('paper-name-list-app', {
+      nameList: [],
+
+      save: function(event) {
+        this.nameList.push(event.detail)
+        this.$.storage.save();
+      },
+
+      delete: function(event) {
+        for (var index in this.nameList) {
+          var object = this.nameList[index];
+          if (event.detail.id === object.id) {
+            var indexToDelete = this.nameList.indexOf(object);
+            if (index > -1) {
+              this.nameList.splice(indexToDelete, 1);
+            }
+          }
+        }
+      }
+    });
+  </script>
+</polymer-element>

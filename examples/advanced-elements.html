@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Creating Polymer Elements</title>
+
+    <!-- 1. Load platform.js for polyfill support. -->
+    <script src="bower_components/platform/platform.js"></script>
+
+    <!-- 2. Load our paper name list app element using an HTML import. -->
+    <link rel="import" href="elements/paper-name-list-app.html">
+
+    <!-- 3. Make the whole thing look a bit more fancy :) -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+    <style media="screen">
+      body {
+        font-family: 'Merriweather', serif;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 4. Declare our app element. This is the element to be used by other developers. -->
+    <paper-name-list-app></paper-name-list-app>
+
+  </body>
+</html>
