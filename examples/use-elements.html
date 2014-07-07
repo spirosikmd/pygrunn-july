@@ -4,8 +4,16 @@
 
     <!-- 1. Load platform.js for polyfill support. -->
     <script src="bower_components/platform/platform.js"></script>
+
+    <!-- 2. Import the element(s) that you want to use -->
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
   </head>
   <body>
-
+    <div>
+      <paper-input label="Your first name"></paper-input>
+    </div>
+    <div>
+      <paper-input label="Your last name"></paper-input>
+    </div>
   </body>
 </html>
