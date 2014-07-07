@@ -1,0 +1,23 @@
+<!-- Load the Polymer core. -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- 2. Import the element(s) that we want to use -->
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+<polymer-element name="my-paper-form" noscript>
+  <template>
+    <div id="title">
+      <h3>My paper form</h3>
+    </div>
+    <div id="firstName">
+      <paper-input floatinglabel label="Your first name"></paper-input>
+    </div>
+    <div id="lastName">
+      <paper-input floatinglabel label="Your last name"></paper-input>
+    </div>
+    <div id="submit">
+      <paper-button label="submit" raisedButton></paper-button>
+    </div>
+  </template>
+</polymer-element>

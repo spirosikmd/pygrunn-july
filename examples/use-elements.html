@@ -5,11 +5,11 @@
     <!-- 1. Load platform.js for polyfill support. -->
     <script src="bower_components/platform/platform.js"></script>
 
-    <!-- 2. Import the element(s) that you want to use -->
+    <!-- 2. Import the element(s) that we want to use -->
     <link rel="import" href="bower_components/paper-input/paper-input.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
 
-    <!-- 3. Make it look a bit more fancy :) -->
+    <!-- 3. Make the whole thing look a bit more fancy :) -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
     <style media="screen">
@@ -23,10 +23,10 @@
       <h3>My paper form</h3>
     </div>
     <div id="firstName">
-      <paper-input label="Your first name"></paper-input>
+      <paper-input floatinglabel label="Your first name"></paper-input>
     </div>
     <div id="lastName">
-      <paper-input label="Your last name"></paper-input>
+      <paper-input floatinglabel label="Your last name"></paper-input>
     </div>
     <div id="submit">
       <paper-button label="submit" raisedButton></paper-button>
