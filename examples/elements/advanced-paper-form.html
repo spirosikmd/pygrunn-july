@@ -13,10 +13,10 @@
       <h3>My paper form</h3>
     </div>
     <div id="firstName">
-      <paper-input floatinglabel label="Your first name" value="{{firstName}}"></paper-input>
+      <paper-input floatinglabel label="Your first name" inputValue="{{firstName}}"></paper-input>
     </div>
     <div id="lastName">
-      <paper-input floatinglabel label="Your last name" value="{{lastName}}"></paper-input>
+      <paper-input floatinglabel label="Your last name" inputValue="{{lastName}}"></paper-input>
     </div>
     <!-- 4. On click we execute the save() function of our element. -->
     <div id="submit">
@@ -29,6 +29,7 @@
   <script>
     Polymer('advanced-paper-form', {
       save: function() {
+        if (this.firstName.trim() === '' || this.lastName.trim() === '') return;
         var lastObject = this.nameList[this.nameList.length - 1];
         var id = 1;
         if (lastObject) {
